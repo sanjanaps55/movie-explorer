@@ -2,6 +2,10 @@ import MovieCard from "../components/moviecard"
 import "../css/Home.css"
 import { useState,useEffect } from "react";
 import { searchMovies,getPopularMovies } from "../services/api";
+
+console.log("BASE_URL:", import.meta.env.VITE_BASE_URL);
+console.log("API_KEY:", import.meta.env.VITE_API_KEY);
+
 function Home(){
     const [serachQuery,setSerachQuery]= useState("");
     const [movies,setMovies]=useState([]);
