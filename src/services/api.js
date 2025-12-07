@@ -1,5 +1,5 @@
-BASE_URL=process.env.BASE_URL
-API_KEY=process.env.API_KEY
+const BASE_URL=import.meta.env.VITE_BASE_URL
+const API_KEY=import.meta.env.VITE_API_KEY
 export const getPopularMovies =async()=>{
     const response =await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}`);
     const data= await response.json()
